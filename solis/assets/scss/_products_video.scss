@@ -1,0 +1,137 @@
+.products{
+  &__container{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  &__video-wrapp{
+    border: 1px solid #E4E4E4;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__icon-elips1{
+    width: 13px;
+    height: 13px;
+    margin: 0 8px;
+    stroke: #E4E4E4;
+  }
+  &__player{
+     margin: 31px 0;
+     position: relative;
+      .player-play{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: rgba(88,98,145,0.3);
+        z-index: 1;
+        cursor: pointer;
+        &:before {
+          content: '';
+          color: #262A3F;
+          display: block;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          left: 50px;
+          width: 0;
+          height: 0;
+          border: 29px solid transparent;
+          border-top-width: 21px;
+          border-bottom-width: 21px;
+          border-left-color: #262A3F;
+          border-right-width: 0;
+          transition: transform .2s ease;
+        }
+        &:hover{
+          &::before {
+            transform: scale(1.4);
+            transition: all .5s ease-in-out;
+         }
+        }
+      }
+      .player-over{
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      display: none;
+     }
+  }
+  .player-playing{
+    .player-play{
+      opacity: 0;
+      visibility: hidden;
+    }
+    .player-over{
+      display: block;
+    }
+  }
+  &__video{
+    max-width: 870px;
+    width: 100%;
+    border-radius: 32px;
+  }
+  &__icon-elips2{
+    width: 35px;
+    height: 35px;
+    margin: 0 14px 0 21px;
+    stroke: #E4E4E4;
+  }
+  &__title{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    color: #262A3F;
+    padding: 50px 0 20px;
+    span{
+      color: #85BBB1;
+    }
+  }
+}
+@media(max-width: 767.98px){
+.products{
+  &__icon-elips1{
+    margin: 0 3px;
+    stroke: #E4E4E4;
+  }
+  &__player{
+    margin: 10px 0;
+      .player-play{
+        width: 60px;
+        height: 60px;
+        &:before {
+          content: '';
+          left: 23px;
+          border-top-width: 10px;
+        border-bottom-width: 10px;
+        border-left-width: 19px;
+        }
+      }
+  }
+  &__icon-elips2{
+    margin: 0 5px 0 3px;
+  }
+}
+}
+@media(max-width: 400px){
+.products{
+  &__title{
+    font-size: 36px;
+    padding: 30px 0 20px;
+  }
+  }
+}
