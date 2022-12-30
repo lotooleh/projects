@@ -1,0 +1,52 @@
+.footer{
+  &__line{
+    border: 1px solid #E4E4E4;
+  }
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+  }
+  &__made-by{
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    .made-by{
+      &__text{
+        opacity: .6;
+      }
+    }
+    span{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.08em;
+        color: #303f26;
+       }
+  }
+  &__agreement{
+    display: flex;
+    gap: 32px;
+    a{
+        font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+letter-spacing: 0.08em;
+text-transform: capitalize;
+color: #262A3F;
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  .footer{
+    &__content{
+      flex-direction: column;
+      align-items: center;
+  }     
+  &__text{
+    font-size: 14px;
+  } 
+}        
+}

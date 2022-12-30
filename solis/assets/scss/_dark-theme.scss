@@ -1,0 +1,146 @@
+.dark-theme {
+  background: #161926;
+  .text{
+    color: #FFFFFF;
+  }
+  .button{
+    color: #53F3CD;
+  }
+  .button-bg{
+    background: #53F3CD;
+  }
+  .buttons:hover .button{
+    color: #02E0AB;
+  }
+  .buttons:hover .button-bg{
+    background: #02E0AB;
+  }
+  .header {
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.244636) 24.1%, rgba(255, 255, 255, 0) 47.19%), rgba(255, 255, 255, 0.02);
+    &__logo{
+      .logo{
+        &__union:hover{
+          fill: #53F3CD;
+        }
+        &__solis:hover{
+          fill: #53F3CD;
+        }
+        }
+      }
+    &__menu{
+      .menu__item a{
+        color: #FFFFFF;
+        }
+      .menu__item a:hover{
+        color: #53F3CD;
+        }
+      .menu__item a:focus{
+        color: #53F3CD;
+       }
+      .menu__item a::before{
+        background: linear-gradient(96.73deg, #53F3CD 6.73%, rgba(83, 243, 205, 0) 116.9%);
+        opacity: 0.7;
+        }
+      }
+  }       
+.first-screen{
+  &__bg{
+    background-image: url(../../src/img/first-screen/first-screen-image-dark.png);
+  }
+  &__content{
+    .content{
+      &__title{
+        color: #FFFFFF;
+        span{
+          color: #689FF2;
+          }
+          }
+        }
+    }
+  }
+.info{
+  &__content{
+    background: #161926;
+  }
+  &__list{
+    h4{
+    color: #FFFFFF;
+  }
+  }
+}
+.benefits{
+  &__title{
+    color: #FFFFFF;
+    span{
+      color:  #689FF2;
+    }
+  }
+}
+.quote{
+  &__icon{
+    display: none;
+  }
+  &__icon-dark{
+    display: block;
+  }
+}
+.products{
+  &__title{
+      color:#FFFFFF;
+    span{
+      color:  #689FF2; 
+    }
+  }
+}
+.use-cases{
+    &__content{
+      background: #161926;
+      .content{
+      &__title{
+        color: #FFFFFF;
+      }
+      }
+    }
+} 
+.pricing{
+  &__title{
+    color: #FFFFFF;
+    span{
+      color:  #689FF2;
+    }
+  }
+}
+.resources{
+  &__title{
+    color: #fff;
+    span{
+      color: #689FF2;
+    }
+  }
+  input{
+    
+    color: #FFFFFF;
+    background: #161926;
+  }
+  input::placeholder{
+    color: #fff;
+    opacity: 0.5;
+  }
+  #button{
+    max-width: 166px;
+    background: #161926;
+  }
+}
+.footer{
+  &__made-by{
+    span{
+      color: #FFFFFF;
+       }
+  }
+  &__agreement{
+    a{
+      color: #FFFFFF;
+    }
+  }
+}
+}

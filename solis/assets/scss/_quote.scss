@@ -1,0 +1,69 @@
+.quote{
+    margin: 146px 0 120px;
+    position: relative;
+  &__bg{
+    max-width: 1170px;
+    min-height: 400px;
+    background-image: url(../../src/img/quote/quote-background.png);
+    background-size: cover;
+  }
+  &__icon{
+    position: absolute;
+    margin: 72px 0 0 101px;
+  }
+  &__icon-dark{
+    position: absolute;
+    margin: 72px 0 0 101px;
+    display: none;
+  }
+  &__title{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 46px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    max-width: 710px;
+    padding: 100px 0 40px 160px;
+  }
+  &__text{
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+    padding: 0 0 100px 160px;
+  }
+}
+@media(max-width: 767.98px){
+    .quote{ 
+      margin: 90px 0 60px;
+      &__icon,
+      &__icon-dark{
+        margin: 72px 0 0 6px;   
+      }
+      &__title{
+        padding: 100px 0 40px 65px;
+      }
+      &__text{
+        padding: 0 0 100px 65px;
+      }
+    }
+}
+@media(max-width: 470px){
+    .quote{ 
+      margin: 60px 0 40px;
+        &__icon,
+        &__icon-dark{
+          margin: 32px 0 0 6px;   
+          }
+      &__title{
+        font-size: 26px;
+        padding: 60px 0 40px 65px;
+      }
+      &__text{
+        padding: 0 0 60px 65px;
+      }
+    }
+}
