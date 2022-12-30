@@ -1,0 +1,125 @@
+  .paginate{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+  }
+  .pagination-container {
+    display: flex;
+    column-gap: 10px;
+  }
+  .paginate-buttons {
+    height: 50px;
+    width: 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #5445d8e8;
+    border: 1px solid #fff;
+    color: #fff;
+  }
+  .paginate-buttons:hover {
+    background-color:  rgb(53, 53, 167);
+  }
+  .active-page {
+    background-color: #2121c9;
+    border: 3px solid #fff;
+    color: #fff;
+  }
+  .active-page:hover {
+    background-color: #2988c8;
+  }
+  .movie_wrap{
+    width: 100%;
+    min-height:500px;
+    background: url(../../../public/src/img/bg-search.jpg);
+    background-size: cover;
+}
+  .movies-items{
+    margin: 0 auto;
+    max-width: 1350px;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(4, 330px);
+      grid-template-rows: repeat(5, 1fr);
+      gap: 10px;
+    }
+  .movies{
+    .movies-item{
+      background: #14144a;
+      border-radius: 10px;
+      text-align: center;
+    }
+    &__img {
+      width: 310px;
+    height: 430px;
+    padding-top: 10px;
+    }
+    &__title{
+      font-size: 30px;
+      color: #fff;
+      padding: 10px 0;
+    }
+    &__popular {
+      font-size: 24px;
+      color: #cec1c1;
+    }
+    &__release_date {
+      font-size: 24px;
+      color:#d6aeae;
+      padding: 10px 0;
+    }
+  }
+@media(max-width:1350px){
+  .movies-items{
+      grid-template-columns: repeat(3, 330px);
+      grid-template-rows: 6, 1fr;
+      padding: 0 15px;
+    }
+}  
+@media(max-width:1060px){
+  .movies-items{
+      grid-template-columns: repeat(2, 330px);
+      grid-template-rows: 10, 1fr;
+    }
+}  
+@media(max-width:700px){
+  .movies-items{
+      grid-template-columns: repeat(1, 430px);
+      grid-template-rows: 20, 1fr;
+      gap: 10px;
+    }
+    .movies{
+      &__img {
+        width: 400px;
+      height: 430px;
+      padding-top: 10px;
+      }
+    }
+    .paginate-buttons {
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+  }
+    .pagination-container {
+      column-gap: 2px;
+    }
+}
+@media(max-width:470px){
+  .movies-items{
+      grid-template-columns: repeat(1, 330px);
+    }
+    .movies{
+      &__img {
+        width: 310px;
+      }
+    }
+    .paginate-buttons {
+      height: 35px;
+      width: 35px;
+    }
+      .pagination-container {
+        column-gap: 2px;
+      }
+}    
+    
+   
+  
