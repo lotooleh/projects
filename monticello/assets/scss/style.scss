@@ -1,0 +1,26 @@
+@font-face{
+    font-family: 'Montserrat';
+    src: url(../fonts/montserrat-bold.woff2);
+    font-weight: 700;
+}
+@font-face{
+    font-family: 'Montserrat';
+    src: url(../fonts/montserrat-regular.woff2);
+    font-weight: 400; 
+}
+@font-face{
+    font-family: 'Source Sans Pro';
+    src: url(../fonts/source-sans-pro-regular.woff2);
+    font-weight: 400; 
+}
+@font-face{
+    font-family: 'Open Sans';
+    src: url(../fonts/open-sans-italic.woff2);
+    font-weight: 400; 
+}
+@font-face{
+    font-family:'Open Sans';
+    src: url(../fonts/open-sans400.woff2);
+    font-weight: 400; 
+}
+@import "_zero","_header", "_main", "_footer","_form" ;
