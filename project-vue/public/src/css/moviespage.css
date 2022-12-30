@@ -1,0 +1,72 @@
+.paginate {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.pagination-container {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+
+.paginate-buttons {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: rgb(242, 242, 242);
+  border: 1px solid rgb(217, 217, 217);
+  color: black;
+}
+
+.paginate-buttons:hover {
+  background-color: #d8d8d8;
+}
+
+.active-page {
+  background-color: #3498db;
+  border: 1px solid #3498db;
+  color: white;
+}
+
+.active-page:hover {
+  background-color: #2988c8;
+}
+
+.movies-items {
+  max-width: 1380px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.movies .movies-item {
+  height: 610px;
+  background: #14144a;
+  border-radius: 10px;
+}
+
+.movies__img {
+  width: 330px;
+  height: 430px;
+}
+
+.movies__title {
+  font-size: 30px;
+  margin: 10px 0 10px 15px;
+  color: #fff;
+}
+
+.movies__popular {
+  margin: 0 0 10px 15px;
+  font-size: 24px;
+  color: #cec1c1;
+}
+
+.movies__release_date {
+  margin: 0 0 10px 15px;
+  font-size: 24px;
+  color: #d6aeae;
+}
