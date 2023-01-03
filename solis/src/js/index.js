@@ -83,3 +83,9 @@ for (let anchor of anchors) {
     })
   })
 }
+
+//close burger-menu at click
+$('.menu__item').click (function () {
+  $('header__burger-menu').toggleClass('header__burger-menu_active');
+  $('header').toggleClass('header_active');
+});
