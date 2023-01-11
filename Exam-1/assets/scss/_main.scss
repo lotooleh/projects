@@ -1,4 +1,4 @@
-.section-1{
+.first-screen{
     position: relative;
     min-height: 489px;
     margin-top: 100px;
@@ -13,7 +13,7 @@ line-height: 110%;
 color: #212353;
         }
         &__text{
-            width: 370px;
+            max-width: 370px;
             font-family: 'Montserrat';
             font-style: normal;
             font-weight: 500;
@@ -29,6 +29,8 @@ background: #9C69E2;
 border: 1px solid #9C69E2;
 box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
 border-radius: 50px;
+cursor: url(../img/cursor.svg),pointer;
+transition: all 1s ease;
         }
         &__button a{
         font-family: 'Montserrat';
@@ -41,17 +43,17 @@ cursor: url(../../src/img/cursor.svg),pointer;
         }
          &__button:hover{
      background: #8A40EE;
-     cursor: url(../img/cursor.svg),pointer;
+     
         }
         &__img{
             position: absolute;
-            right: 0;
+            right: 15px;
             bottom: 0;   
         }
     }
 }
 @media(max-width: 1140px){
-    .section-1{ 
+    .first-screen{ 
         margin-top: 50px; 
         align-items: center;
         .content{
@@ -66,26 +68,25 @@ cursor: url(../../src/img/cursor.svg),pointer;
                 margin: 0 auto;
             }
             &__button{
-                margin: 0 0 20px 100px
+                margin: 0 0 20px 0px
             }
             &__img{
                 position: relative;
               display: flex;
               justify-content: center;
+              img{
+                width: 100%;
+              }
             }
           }
       }
-  }   
+}   
 @media(max-width: 768px){
-    .container{
-        padding: 0 15px;
-    }
-    .section-1{ 
+    .first-screen{ 
         margin-top: 30px; 
       .content{
           &__title{
-          max-width: 500px;
-        font-size: 60px;
+        font-size: 48px;
           }
           &__text{
               font-size: 20px;
@@ -94,24 +95,32 @@ cursor: url(../../src/img/cursor.svg),pointer;
         }
     }
 }
-.section-2{
-    max-width: 1170px;
-    width: 100%;
-    min-height: 560px;
+@media(max-width: 470px){
+    .first-screen{ 
+      .content{
+          &__title{
+        font-size: 36px;
+          }
+          &__text{
+              font-size: 18px;
+          }
+        }
+    }
+}
+.about{
     margin-top: 100px;
-position: relative;
+    position: relative;
     &__wrapp{
-    min-height: 560px;
         background: #FDE8F5;
         border-radius: 50px;
      display: flex;
      justify-content: space-between;   
     }
     &__img{
-        width: 400px;
-     height: 410px;
-        background-image: url(../img/image.png);
-        margin: 75px 0 0 70px;
+        padding: 75px 0 75px 70px;
+        img{
+            width: 100%;
+        }
     }
     .content{
     &__title{
@@ -138,75 +147,61 @@ padding: 0 70px 0 0;
 }
 }
 @media(max-width: 980px){
- .section-2{
+ .about{
     margin-top: 60px;
     &__wrapp{
      display: flex;
      flex-direction: column-reverse; 
+     align-items: center;
     }
     &__img{
-        margin: 0 auto;
+      padding: 10px 15px;
     }
     .content{
     &__title{
-margin: 0 auto  ;
 text-align: center;
+padding: 30px 15px;
     }
     &__text{
+    text-align: center;
 font-size: 22px;
-padding: 30px 0;
-margin: 0 auto;
+padding: 0px 10px;
     }
 }
 }
 }
 @media(max-width: 768px){
- .section-2{
+ .about{
     margin-top: 30px;
     .content{
     &__title{
 font-weight: 600;
 font-size: 36px;
-min-height: 100px;
-padding: 30px 0 0;
-    max-width: 350px;
     }
     &__text{
-text-align: center;
 font-size: 20px;
 width: 100%;
 color: black;
-padding: 20px 0;
     }
 }
 }
 }
 @media(max-width: 460px){
-.section-2{
+.about{
    margin-top: 15px;
-    &__img{
-        width: 300px;
-    }
     .content{
     &__title{
 font-size: 30px;
-min-height: 80px;
-margin: 20px auto 0 ;
-text-align: center;
     }
     &__text{
     display: block;
 font-size: 20px;
-width: 100%;
 color: black;
-padding: 20px 0;
-margin: 0 auto;
-    text-align: center;
     }
 }
 }
 }
-.section-3{
+.features{
  .heading{
  &__title{
  font-family: 'Work Sans';
@@ -233,7 +228,6 @@ max-width: 528px;
  }
  &__cards{
     max-width: 1170px;
-    min-height: 850px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2 1fr);
@@ -241,9 +235,9 @@ max-width: 528px;
     row-gap: 50px;
     .cards{
         &__card{
-        display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
+            display: flex;
+            justify-content: end;
+            position: relative;
      .card{
         &__search{
         background: #F0FAF9;
@@ -260,8 +254,9 @@ max-width: 528px;
         &__content{
      max-width: 400px;
      border-radius: 50px;
-     position: absolute;
-     z-index:1 ;
+     display: flex;
+     flex-direction: column;
+     padding: 0 70px 0 100px;
         }
          &__title{
         font-family: 'Work Sans';
@@ -271,7 +266,8 @@ max-width: 528px;
      line-height: 130%;
      align-items: center;
      color: #212353;
-     padding: 62px 0 0 100px;
+     padding: 62px 0 20px;
+     z-index: 3;
         }
         &__text{
      font-family: 'Montserrat';
@@ -280,11 +276,13 @@ max-width: 528px;
      font-size: 16px;
      line-height: 160%;
      color: #4B5D68;
-     padding: 20px 70px 0 100px;
-     height: 180px;
+     max-width: 230px;
+     min-height: 180px;
+     z-index: 3;
         }
         &__link {
-     padding: 20px 0 81px 100px;
+     padding: 20px 0 62px;
+     z-index: 3;
         }
         &__link a{
          font-family: 'Montserrat';
@@ -297,48 +295,48 @@ max-width: 528px;
          cursor: url(../img/cursor.svg),pointer;
         }
         &__svg{
-        padding-left: 20px;
+          padding-left: 20px;
         }
         &__img{
         position: absolute;
-        padding: 0 340px 0 0 ;
-        z-index:2 ;
+        left: 0;
+        margin: 110px 0;
         }
         &__elipse1{
          z-index: 2;
          position: absolute;
-         left: 200px;
-         top: 60px;
+         right: 120px;
+         top: 70px;
         }
         &__vector1{
         z-index: 2;
         position: absolute;
-     left: 145px;
-     top: 20px;
+     right: 37px;
+     top: 30px;
         }
         &__vector2{
         z-index: 2;
         position: absolute;
-     left: 170px;
-     top: 220px;
+        right: 4px;
+        bottom: 34px;
         }
         &__elipse3{
         z-index: 2;
         position: absolute;
-     left: 310px;
-     top: 25px;
+        right: 20px;
+        top: 25px;
         }
         &__elipse4{
         z-index: 2;
          position: absolute;
-     left: 310px;
-     top: 330px;
+         right: 20px;
+         bottom: 28px;
         }
          &__vector4{
         z-index: 2;
         position: absolute;
-     left: -30px;
-     top: 25px;
+        right: 85px;
+        top: 18px;
         }
       }
  }
@@ -346,19 +344,17 @@ max-width: 528px;
 }
 }
 @media(max-width: 1170px){
-    .section-3{
+    .features{
         &__cards{
-        max-width: 1170px;
-           min-height: 1660px;
            grid-template-columns: 570px;
            grid-template-rows: 1fr 1fr 1fr 1fr;
            row-gap: 30px;
            justify-content: center;
-        }  
+    }  
 }
 }
 @media(max-width: 768px){
-.section-3{
+.features{
  .heading{
  &__title{
 font-size: 60px;
@@ -372,29 +368,23 @@ max-width: 600px;
  }
  }
  &__cards{
-    grid-template-columns: 430px;
-    grid-template-rows: repeat(2 1fr);
-    row-gap: 20px;
+    grid-template-columns: 400px;
     .cards{
         &__card{
+            justify-content: center;
      .card{
         &__content{
-            min-height: 400px;
+          padding: 0 70px;
         }
          &__title{
-     font-weight: 600;
-     padding: 22px 0 0 200px;
+        font-weight: 600;
         }
         &__text{
-    min-height: 250px;
      font-weight: 500;
-     padding: 20px 20px 0 200px;
         }
-        &__link {
-            padding: 20px 0 31px 200px;
-        }   
         &__img{
-            padding: 0 200px 0 0;
+            position: relative;
+            margin: 0 auto;
         }
         
       }
@@ -403,12 +393,41 @@ max-width: 600px;
 }
 }
 }
-.section-4{
+@media(max-width: 431px){
+    .features{
+     .heading{
+     &__title{
+    font-size: 36px;
+    padding: 30px 0 20px;
+     }
+     &__text{
+    font-weight: 500;
+    font-size: 22px;
+     }
+     }
+     &__cards{
+        grid-template-columns: 320px;
+        .cards{
+            &__card{
+         .card{
+            &__content{
+              max-width: 320px;
+             padding: 0 30px;
+            }
+             &__title{
+             padding: 30px 0 20px;
+             }
+          }
+     }
+    }
+    }
+    }
+    }
+.testimonials{
 max-width: 1170px;
 width: 100%;
 margin-top: 120px;
     &__wrapp{
-        min-height: 580px;
 background: #CCDDFF;
 border-radius: 50px;
 position: relative;
@@ -423,151 +442,121 @@ text-align: center;
 color: #4B5D68;
 padding: 80px 0;
     }
-    &__content{
+    &__cards{
     max-width: 1030px;
-    min-height: 300px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 100px;
     margin: 0 auto;
-    }
-    .content{
-    &__people{
+    padding-bottom: 80px;
+    z-index: 4;
+    .cards{
+        &__card{
+        display: flex;
+        justify-content: space-between;
+        background: #FFFFFF;
+    border: 1px solid #9C69E2;
+    box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+    border-radius: 50px;
+    z-index: 4;
+        }
+        &__john, &__hanna{
+            position: absolute;
+            width: 90px;
+            height: 90px;
+        border-radius: 45px;
+        margin: 50px 0 0 30px;
+        z-index: 3;
+        }
+        &__john{
+            background-image: url(../img/rectangle44.png);
+        }
+        &__hanna{
+        background-image: url(../img/rectangle441.png);   
+        }
+        &__name{
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
     display: flex;
-    justify-content: space-between;
-    background: #FFFFFF;
-border: 1px solid #9C69E2;
-box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
-border-radius: 50px;
+    align-items: center;
+    color: #212353;
+    padding: 50px 0 0 135px;
+        }
+        &__link{
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em;
+    color: #9C69E2;
+    padding: 2px 0 19px 135px;
+        }
+        &__text{
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #4B5D68;
+    padding: 0 30px 50px 135px;
+        }
+        }
     }
-    &__john, &__hanna{
-        position: absolute;
-        width: 90px;
-        height: 90px;
-    background-image: url(../img/rectangle44.png);
-    border-radius: 45px;
-    margin: 50px 0 0 30px;
-    z-index: 2;
-    }
-    &__hanna{
-    background-image: url(../img/rectangle441.png);   
-    }
-    &__name{
-    font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 160%;
-display: flex;
-align-items: center;
-color: #212353;
-padding: 50px 0 0 135px;
-    }
-    &__link{
-    font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 160%;
-display: flex;
-align-items: center;
-letter-spacing: 0.01em;
-color: #9C69E2;
-padding: 2px 0 19px 135px;
-    }
-    &__text{
-    font-family: 'Montserrat';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 160%;
-color: #4B5D68;
-padding: 0 30px 50px 135px;
-min-height: 131px;
-    }
-    &__vector1{
+     &__vector1{
         position: absolute;
         transform: rotate(15deg);
         top: -15px;
         left: -50px;
-        z-index: 1;
          }
     &__elipse1{
     position: absolute;
         transform: rotate(-10deg);
         top: 185px;
         left: 235px;
-        z-index: 1;
          }
     &__vector2{
         position: absolute;
         transform: rotate(88deg);
         top: 50px;
-        left: 630px;
-        z-index: 1;
+        right: -145px;
          }
     &__elipse2{
     position: absolute;
-        transform: rotate(-40deg);
-        top: 505px;
-        left: 585px;
-        z-index: 1;
+    transform: rotate(-40deg);
+    bottom: 20px;
+        right: 490px;
          }
-    }
 }
 @media(max-width: 1170px){
-    .section-4{
-        max-width: 768px;
+    .testimonials{
             margin-top: 50px;
             &__title{
                 padding: 50px 0;
                     }
-            &__content{
-            max-width: 1170px;
-            width: 100%;
+            &__cards{
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr;
-            gap: 20px;
-            justify-content: center;
-            padding-bottom: 20px;
-            }
-            .content{
-            &__people{
-            display: flex;
-            justify-content: space-between;
-            }
-            &__john, &__hanna{
-            z-index: 2;
-            }
-            &__vector1{
-               display: none;
-                 }
-            &__elipse1{
-            display: none;
-                 }
-            &__vector2{
-                display: none;
-                 }
-            &__elipse2{
-            display: none;
-                 }
-            }
+            gap: 30px;
+            padding: 0 20px 60px;
         }
 }
+}
 @media(max-width: 768px){
-.section-4{
-max-width: 465px;
+.testimonials{
 margin-top: 20px;
     &__title{
-font-weight: 700;
-font-size: 40px;
-padding: 40px 0;
+font-weight: 600;
+font-size: 36px;
+padding: 30px 0;
     }
-    &__content{
-    max-width: 768px;
-    }
-    .content{
+    .cards{
     &__name{
 font-weight: 700;
 font-size: 24px;
@@ -585,5 +574,44 @@ padding: 0 30px 50px 135px;
 min-height: 131px;
     }
     }
+    &__vector1{
+        display: none;
+         }
+    &__elipse1{
+        display: none;
+         }
+    &__vector2{
+       display: none;
+       }
+    &__elipse2{
+    display: none;
+         }
 }
 }
+@media(max-width: 470px){
+    .testimonials{
+         .cards{
+            &__about{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            &__john, &__hanna{
+                position: relative;
+                margin: 20px auto 10px;
+            }
+        &__name{
+    font-weight: 600;
+    font-size: 22px;
+    padding: 0;
+        }
+        &__link{
+        padding: 10px 20px 0;
+            }
+            &__text{
+        padding: 20px 30px;
+        text-align: center;
+            }
+            }
+    }
+    }
