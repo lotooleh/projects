@@ -48,6 +48,7 @@
        &__button-1:hover{
            background: #EB4BAB;
            cursor: url(../img/cursor.svg),pointer;
+           transition:all 1s ease;
       }
       &__button-2{
    box-sizing: border-box;
@@ -79,13 +80,16 @@
       &__button-2:hover{
   background:#9C69E2;
   cursor: url(../img/cursor.svg),pointer;
+  transition:all 1s ease;
   }
       &__button-2:hover  a{
      color: #FFFFFF;
      cursor: url(../img/cursor.svg),pointer;
+     transition:all .5s ease;
   }
      &__button-2:hover .heading__button-svg{
      stroke:#FFFFFF;
+     transition:all .5s ease;
   }
   }
 }
@@ -205,6 +209,7 @@ padding: 100px 0 0;
       opacity: 0.1;
       border-radius: 45px;
       cursor: url(../img/cursor.svg),pointer;
+      transition:all 1s ease;
    }
    &__face:hover{
       color:#3B5998;
@@ -277,6 +282,7 @@ color: #212353;
       text-align: center;
       }
       &__subtitle{
+      text-align: center;
       font-size: 22px;
       }
       &__button{
@@ -298,36 +304,39 @@ padding: 50px 0 0;
     }
     &__city{
    font-weight: 600;
+   text-align: center;
    }
     &__site{
    font-weight: 500;
    font-size: 20px;
+   text-align: center;
    }
    &__tel{
    font-weight: 500;
    font-size: 20px;
+   text-align: center;
    }
    }
    }
-   }
-.content{
    &__nav{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   .nav{
-   &__title{
-   font-size: 30px;
-   padding: 0 0 10px
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      .nav{
+      &__title{
+      font-size: 30px;
+      padding: 0 0 10px;
+      text-align: center;
+      }
+      &__list li{
+      font-weight: 500;
+      font-size: 24px;
+      }
+   &__media{
+      padding-bottom: 20px;
    }
-   &__list li{
-   font-weight: 500;
-   font-size: 24px;
    }
-&__media{
-   padding-bottom: 20px;
-}
-}
 }
 }
 }
@@ -343,4 +352,36 @@ text-align: center;
   }
 }
 }
+}
+@media(max-width: 470px){
+   .footer{
+   &__heading{
+       .heading{
+         &__button{
+         flex-direction: column;
+         }
+     }
+   }
+   &__content{
+      flex-direction: column;
+      gap: 30px;
+      padding: 50px 0 0;
+      .content{
+         &__nav{
+         .nav{
+         &__title{
+         font-size: 24px;
+         }
+         &__list li{
+         font-weight: 400;
+         font-size: 22px;
+         }
+      }
+      }
+      }
+      }
+   &__copyring{
+      padding: 40px 0 30px;
+      }
+   }
 }

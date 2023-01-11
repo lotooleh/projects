@@ -1,9 +1,11 @@
 .container{
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    max-width: 1170px;
-    width: 100%;    
+    padding: 0 15px; 
 }
 .header{
+    max-width: 1170px;
     min-height:100px;
     background: #FFFFFF;
     margin-top: 15px;
@@ -14,8 +16,8 @@
     &__logo-nav{   
         display: flex;
         justify-content: space-between;
-        min-width: 513px;
         align-items: center;
+        gap: 120px;
     }
     &__burger-menu{
         display: none;
@@ -86,6 +88,7 @@ color: #4B5D68;
             &__click:hover{
         background:#9C69E2;
         cursor: url(../img/cursor.svg),pointer;
+        transition: all 1s ease;
         }
             &__click:hover a{
            color: #FFFFFF;
@@ -97,13 +100,13 @@ color: #4B5D68;
         }   
      }   
 .header_active{
-   flex-direction: column;
+    flex-direction: column;
     overflow: unset;
     .header__logo-nav{
     gap: 50px;
     align-items: flex-start;
     .header__logo{
-    padding: 20px 0 0 40px;
+    display: none;
     }
     }
     .header__nav{
@@ -116,32 +119,39 @@ color: #4B5D68;
            align-items: flex-start;
       }
        &__items a{
-    font-weight: 600;
-    font-size: 30px;
+           font-weight: 600;
+           font-size: 24px;
        }
        }
-       }   
+       } 
+    .button{ 
+        &__click{
+            display: none;
+        }
+        }  
  }
 @media(max-width: 768px){
 .container{
     padding: 0 15px;
 }
 .header{
-    min-height:120px;
     display: flex;
-    justify-content: space-between;
-&__logo-nav{
-        display: flex;
-        flex-direction: row-reverse;
-        min-width: 200px;
-}
+    justify-content: flex-end;
+    gap: 40px;
+    min-height:76px;
 &__burger-menu{
     display: block;
     margin-left: 5px
 }
 &__nav{
     display: none;
-    min-height: 100px;
    }
     }
+}
+@media(max-width: 400px){
+  .header{
+    &__logo{
+      display: none;
+    }
+  }
 }
