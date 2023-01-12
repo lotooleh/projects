@@ -23,4 +23,12 @@
     src: url(../fonts/open-sans400.woff2);
     font-weight: 400; 
 }
-@import "_zero","_header", "_main", "_footer","_form" ;
+.container{
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+}
+.main{
+    background: #fff;
+}
+@import "_zero","_header", "_contacts-section","_form","_projects-section","_news-section","_gallery-section","_footer" ;
