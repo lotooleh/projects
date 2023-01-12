@@ -1,0 +1,168 @@
+.section-2{
+    background: url(../../src/img/Background.png);
+    background-size: cover;
+    width: 100%;
+}
+.news{
+     min-height: 978px;
+    &__title{
+        padding: 120px 0 0;
+        .title{
+           &__line{
+            width: 100px;
+            border: 1px solid #FFFFFF;
+            margin: 0 auto;
+           }
+           &__text{
+            font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 44px;
+line-height: 54px;
+text-align: center;
+color: #fff;
+padding: 30px 0 90px;
+           }
+        }
+    }
+    &__articles{
+        max-width: 1170px;
+     }
+    &__article{
+        max-width: 370px;
+        background: #FFFFFF;
+        .article{
+            &__image{
+                width: 100%;
+            }
+            &__title{
+                font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 27px;
+color: #2C4058;
+max-width: 330px;
+margin: 0 auto;
+padding: 26px 0 15px;
+            }
+            &__text{
+                font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+color: #2C4058;
+max-width: 330px;
+margin: 0 auto;
+
+            }
+            &__avtor{
+                display: flex;
+                padding: 39px 0 0 20px;
+                gap: 20px;
+                .avtor{
+                    &__photo{
+                        width: 60px;
+height: 60px;
+background-image: url(../img/photo1.png);
+border-radius: 45px;
+                    }
+&__photo-two{
+background-image: url(../img/photo2.png);}
+&__photo-three{
+background-image: url(../img/photo3.png);}
+&__photo-four{
+background-image: url(../img/photo1.png);}
+&__photo-five{
+background-image: url(../img/photo2.png);}
+&__content{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 7px 0 38px;
+}                    
+&__name{
+                        font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+color: #2C4058;
+                    }
+                    &__date{
+                        font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: #55B7FF;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 1300px){
+    .news{
+        &__articles{
+            max-width: 768px;
+         }
+    }
+}
+@media(max-width: 800px){
+.section-2{
+padding: 0 15px;
+}
+ .news{
+  min-height: 758px;
+  &__title{
+        padding: 50px 0 0;
+        .title{
+           &__text{
+            font-weight: 600;
+            font-size: 36px;
+padding: 30px 0 40px;
+           }
+        }
+    }
+        &__articles{
+            max-width: 370px;
+         }
+    }
+}
+@media(max-width: 400px){
+    .news{
+    &__title{
+            padding: 30px 0 0;
+            .title{
+               &__text{
+                font-weight: 600;
+                font-size: 24px;
+    padding: 20px 0 30px;
+               }
+            }
+    }
+    &__article{
+        height: 510px;
+    .article{
+    &__title{
+        font-weight: 600;
+        font-size: 18px;
+        text-align: center;
+        padding: 20px 0;
+      }
+     &__text{
+        font-weight: 400;
+        font-size: 16px;
+        padding: 0 20px;
+        text-align: center;
+     }
+    &__avtor{
+        padding: 20px 0 0 0;
+        justify-content: center;
+        }
+    }
+    }
+  }
+}
