@@ -1,0 +1,10 @@
+.main {
+  width: 100%;
+  min-height: 500px;
+  background: url(../../../src/assets/img/bg-forsa.jpg);
+  background-size: cover;
+}
+
+.main .main-wrapper {
+  margin: 0 auto;
+}
