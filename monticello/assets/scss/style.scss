@@ -1,0 +1,34 @@
+@font-face{
+    font-family: 'Montserrat';
+    src: url(../fonts/montserrat-bold.woff2);
+    font-weight: 700;
+}
+@font-face{
+    font-family: 'Montserrat';
+    src: url(../fonts/montserrat-regular.woff2);
+    font-weight: 400; 
+}
+@font-face{
+    font-family: 'Source Sans Pro';
+    src: url(../fonts/source-sans-pro-regular.woff2);
+    font-weight: 400; 
+}
+@font-face{
+    font-family: 'Open Sans';
+    src: url(../fonts/open-sans-italic.woff2);
+    font-weight: 400; 
+}
+@font-face{
+    font-family:'Open Sans';
+    src: url(../fonts/open-sans400.woff2);
+    font-weight: 400; 
+}
+.container{
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+}
+.main{
+    background: #fff;
+}
+@import "_zero","_header", "_contacts-section","_form","_projects-section","_news-section","_gallery-section","_footer" ;
