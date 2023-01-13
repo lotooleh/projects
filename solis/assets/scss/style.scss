@@ -1,0 +1,44 @@
+@font-face{
+    font-family:'Lato';
+    src: url(../fonts/Lato-Light.woff2);
+    font-weight: 300; 
+}
+@font-face{
+    font-family:'Lato';
+    src: url(../fonts/Lato-Regular.woff2);
+    font-weight: 400; 
+}
+@font-face{
+    font-family:'Lato';
+    src: url(../fonts/Lato-Semibold.woff2);
+    font-weight: 600; 
+}
+@font-face{
+    font-family:'Lato';
+    src: url(../fonts/Lato-Bold.woff2);
+    font-weight: 700; 
+}
+@font-face{
+    font-family: 'Playfair Display';
+    src: url(../fonts/PlayfairDisplay-Regular.woff2);
+}
+@font-face{
+    font-family: 'Playfair Display';
+    src: url(../fonts/PlayfairDisplay-Italic.woff2);
+}
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.text{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    color: #262A3F;
+    opacity: 0.8;
+}
+@import "zero","header","theme-switcher","dark-theme","buttons","first-screen","info","benefits","quote","products_video","use-cases","pricing","resources","footer";

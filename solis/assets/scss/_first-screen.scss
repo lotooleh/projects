@@ -1,0 +1,53 @@
+.first-screen{
+    &__bg{
+    position: absolute;
+    height: 1028px;
+    background-image: url(../../src/img/first-screen/First-Screen-Bg-Image.jpg);
+    background-size: cover;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    }
+    &__content{
+      .content{
+        &__title{
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 44px;
+            line-height: 52px;
+            max-width: 523px;
+            color: #262A3F;
+            padding: 260px 0 20px;
+            span{
+              color: #85BBB1;
+          }
+        }
+        &__text{
+            max-width: 439px;
+            padding: 0 0 50px 0;
+        }
+      }
+    }
+}
+@media (max-width: 500px){
+  .first-screen{
+    &__bg{
+    position: absolute;
+    height: 1028px;
+    background-image: url(../../src/img/first-screen/First-Screen-Bg-Image.jpg);
+    background-size: cover;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    }
+    &__content{
+      .content{
+        &__title{
+            font-size: 36px;
+            line-height: 48px;
+          }
+        }
+      }
+    }
+}
