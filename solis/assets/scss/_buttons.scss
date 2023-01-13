@@ -1,0 +1,29 @@
+.buttons{
+    position: relative;
+}
+.button{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #F1897B;
+}
+.button-bg{
+    position: absolute;
+left: 8.2%;
+right: 0%;
+top: 45.83%;
+bottom: 0%;
+background: #F1897B;
+opacity: 0.3;
+}
+.buttons:hover .button{
+    color: #E64F3A;
+    transition: .4s ease-out;
+}
+.buttons:hover .button-bg{
+    background: #E54F3A;
+}
