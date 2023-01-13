@@ -1,0 +1,228 @@
+.header{  
+background: linear-gradient(243.43deg, #7E5AFF 16.9%, #55B7FF 83.27%);
+   &__wrapp{
+    background: url(../../src/img/hd-bg.png);
+   background-size: cover;
+   width: 100%;
+   }
+    &__nav{
+        display: flex;
+    justify-content: space-between;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 53px 0 0;
+    align-items: center;
+    }
+    &__logo{
+        height: 54px;
+    }
+    &__burger-menu{
+        display: none;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background: linear-gradient(to bottom,#000 20%, transparent 21%, transparent 40%,#000 41%, 
+    #000 60%, transparent 61%, transparent 80%, #000 81%);
+    transition: 0.3s all linear;
+    }
+    &__burger-menu_active{
+        background: linear-gradient(45deg, transparent 45%, #000 46%, #000 55%, transparent 56%),
+        linear-gradient(-45deg, transparent 45%,#000 46%, #000 55%, transparent 56%);
+        }
+    &__menu{
+       .menu{
+        &__items{
+          display: flex;
+          gap: 70px;
+        }
+        &__item a{
+            font-family: 'Source Sans Pro';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+color: #FFFFFF;
+text-transform: uppercase;
+display: flex;
+align-items: center;
+justify-content: center;
+&:before{
+   content: '';
+   display: block;
+   height: 8px;
+   width: 8px;
+   border: 1px solid #fff;
+   border-radius: 50%;
+   margin-right: 14px;
+}
+        }
+        &__item a:focus{
+        color:rgb(23, 50, 185);
+        &:before{
+         background:#fff;
+      }
+        }
+        &__item a:hover{
+         color:rgb(23, 50, 185);
+        }
+       }
+    }
+    &__social{
+        display: flex;
+        width: 160px;
+        height: 40px;
+        justify-content: space-between;
+      .social{
+      &__face, &__twitter, &__insta{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        color:#FFFFFF;
+        box-sizing: border-box;
+        border: 1px solid #FFFFFF;
+        border-radius: 45px;
+        cursor: pointer;
+     }
+     &__face:hover{
+     color:#3B5998;
+        border: 1px solid #3B5998;
+        background:#FFFFFF;
+     }
+     &__twitter:hover{
+     color:#00ACEE;
+        border: 1px solid #00ACEE;
+        background:#FFFFFF;
+     }
+     &__insta:hover{
+     color:#C13584;
+        border: 1px solid #C13584;
+        background:#FFFFFF;
+     }
+  }
+  }
+ &__heading{
+ max-width: 990px;
+ margin: 0 auto;
+ display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ &__title{
+ font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 80px;
+line-height: 98px;
+letter-spacing: 0.1em;
+color: #FFFFFF;
+margin: 223px 0 0;
+ }
+ &__subtitle{
+ font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+letter-spacing: 0.3em;
+color: #FFFFFF;
+padding: 20px 0 240px;
+ }
+ &__skrol{
+    padding:0 0 50px;
+ }
+ }
+ .header_active{
+    .header__menu{
+            display: block;
+           }   
+  }   
+@media(max-width:950px){
+    .header{  
+            &__nav{
+                flex-direction: column;
+            padding: 20px 0 0;
+            }
+            &__logo{
+                height: 54px;
+                margin:0 0 30px;
+            }
+            &__menu{
+                padding: 20px 0 70px;
+               .menu{
+                &__items{
+                  gap: 50px;
+                }
+                &__items a{
+        font-weight: 600;
+        font-size: 18px;
+                }
+               }
+            }
+         &__title{
+        font-weight: 600;
+        font-size: 60px;
+        margin: 100px 0 0;
+         }
+         &__subtitle{
+        font-size: 20px;
+        padding: 20px 0 100px;
+         }
+        } 
+}
+@media(max-width:768px){
+.header{
+&__burger-menu{
+    display: block;
+    margin-left: 5px
+}
+&__menu{
+    display: none;
+    .menu{
+      &__items{
+         flex-direction: column;
+         gap: 30px;
+         align-items: flex-start;
+      }
+    }
+   }
+   &__social{
+    .social{
+    &__face, &__twitter, &__insta{
+   font-size: 20px;
+   }
+}
+}
+&__title{
+font-size: 36px;
+margin: 50px 0 0;
+}
+&__subtitle{
+max-width: 450px;
+text-align: center;
+}
+}
+}
+@media(max-width:480px){
+  .header{
+   &__logo{
+      margin: 50px 0 10px;
+   }
+   &__title{
+      font-size: 24px;
+      margin: 20px 0 0;
+   }
+   &__subtitle{
+      font-size: 18px;
+      padding: 20px 0 30px;
+       }
+       &__skrol{
+         padding:0 0 30px;
+      }
+  } 
+}
